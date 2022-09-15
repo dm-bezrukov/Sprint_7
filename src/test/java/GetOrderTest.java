@@ -2,7 +2,10 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
 import steps.OrderSteps;
-import static org.hamcrest.CoreMatchers.notNullValue;
+
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.hasSize;
+
 
 public class GetOrderTest {
     @Test
@@ -12,6 +15,6 @@ public class GetOrderTest {
         ordersList.then()
                 .statusCode(200)
                 .and()
-                .assertThat().body("orders", notNullValue());
+                .body("orders", hasSize(greaterThan(0)));
     }
 }

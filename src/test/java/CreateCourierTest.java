@@ -1,6 +1,5 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import pojos.CreateCourierRequest;
 import steps.CourierSteps;

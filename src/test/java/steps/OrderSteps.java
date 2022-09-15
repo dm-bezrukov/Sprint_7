@@ -1,5 +1,6 @@
 package steps;
 
+import constants.UriConstants;
 import io.qameta.allure.Step;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -12,7 +13,7 @@ import static io.restassured.RestAssured.given;
 public class OrderSteps {
     public static final RequestSpecification REQUEST_SPECIFICATION =
             new RequestSpecBuilder()
-                    .setBaseUri("https://qa-scooter.praktikum-services.ru/api/v1")
+                    .setBaseUri(UriConstants.BASE_TEST_URI)
                     .setBasePath("/orders")
                     .setContentType(ContentType.JSON)
                     .build();
